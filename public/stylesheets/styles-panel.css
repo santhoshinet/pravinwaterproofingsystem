@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+/* ---- Sliding Panel ---- */
+
+#slidingpanel	{
+				position:absolute;
+				top:20px;
+				left:0;
+				z-index:1000;
+				}
+
+#slidingpanel a	{outline:none;}
+
+#slidingpanel p	{
+				width:170px;
+				margin:0;
+				padding:8px 25px 7px;
+				display:block;
+				position:relative;
+				border-bottom:1px solid #000;
+				}
+
+#slidingpanel p:after	{
+				content:"";
+				position:absolute;
+				bottom:-2px;
+				left:0;
+				width:100%;
+				border-bottom:1px solid #424242;
+				}
+
+#slidingpanel p.last	{
+				border-bottom:none;
+				}
+
+#slidingpanel p.last:after	{
+				content:"";
+				position:absolute;
+				bottom:-2px;
+				left:0;
+				width:100%;
+				border-bottom:none;
+				}
+				
+#panel			{
+				width:220px;
+				color:#959595;
+				font:12px Arial, Helvetica, sans-serif;
+				background:#212121;
+				border-radius:0 0 8px 0;
+				-moz-border-radius:0 0 8px 0;
+				-khtml-border-radius:0 0 8px 0;
+				-webkit-border-bottom-right-radius:8px;
+				position:absolute;
+				z-index:999;
+				}
+				
+#panel .color	{
+				width:45px;
+				height:15px;
+				padding:2px;
+				font:normal 10px Arial, Helvetica, sans-serif;
+				}
+				
+#panel select optgroup	{color:#222; margin-top:5px;}
+#panel select option	{color:#5c5c5c;}
+#heading_fonts, #menu_fonts {top:-5px;}
+				
+#toggle			{
+				position:absolute;
+				top:0;
+				right:-65px;
+				z-index:998;
+				}
+				
+div.open, div.close {
+				width:65px;
+				height:63px;
+				display:block;
+				overflow:hidden;
+				cursor: pointer;
+				display: block;
+				text-indent:-9999px;
+				line-height:9999px;
+				cursor:pointer;
+				background-image:url(../images/options_label.png);
+				background-position: right -128px;
+				background-repeat: no-repeat;
+				}
+
+div.open		{background-position: right -128px;}
+div.close		{background-position: right 0;}
+div:hover.open	{background-position: right -192px;}
+div:hover.close	{background-position: right -64px;}
+				
+#slidingpanel label		{
+				width:110px;
+				padding:4px 0 0 0;
+				vertical-align:top;
+				display:inline-block;
+				line-height:1em;
+				*line-height:normal;
+				}
+				
+#slidingpanel label.picker		{
+				width:90px;
+				}
+				
+#slidingpanel span a,
+#slidingpanel span a:before	{
+				height:22px;
+				display:inline-block;
+				position:relative;
+				margin-right:3px;
+				border-radius:5px;
+				-moz-border-radius:5px;
+				-khtml-border-radius:5px;
+				-webkit-border-radius:5px;
+				border:1px solid #4d4d4d;
+				}
+				
+#slidingpanel span a:hover,
+#slidingpanel span a.active	{border:1px solid #2d2d2d;}
+				
+#slidingpanel span.square a	{
+				width:22px;
+				overflow:hidden;
+				}
+				
+#slidingpanel span.square_long a	{
+				width:36px;
+				overflow:hidden;
+				}
+				
+#slidingpanel span.square_long a:before	{
+				width:34px;
+				height:20px;
+				overflow:hidden;
+				content:"";
+				left:0;
+				top:0;
+				position:absolute;
+				border:1px solid #2d2d2d;
+				}
+				
+#slidingpanel span.pointer	{
+				width:10px;
+				height:10px;
+				display:block;
+				overflow:hidden;
+				position:absolute;
+				bottom:0;
+				right:0;
+				background:url(../images/sm_arr.png) 0 0 no-repeat;
+				}
+				
+/* patterns */
+				
+#slidingpanel span.patterns	{
+				display:block;
+				padding-top:10px;
+				}
+				
+#slidingpanel span.patterns a	{
+				width:35px;
+				margin:0 3px 3px 0;
+				overflow:hidden;
+				}
+				
+#slidingpanel span.patterns a:before	{
+				width:33px;
+				height:20px;
+				overflow:hidden;
+				content:"";
+				left:0;
+				top:0;
+				position:absolute;
+				border:1px solid #2d2d2d;
+				}
+				
+/* Samples */
+				
+#slidingpanel span.samples	{
+				display:block;
+				padding-top:10px;
+				}
+				
+#slidingpanel span.samples a	{
+				width:22px;
+				margin:0 3px 3px 0;
+				overflow:hidden;
+				}
+				
+#slidingpanel span.samples a:before	{
+				width:20px;
+				height:20px;
+				overflow:hidden;
+				content:"";
+				left:0;
+				top:0;
+				position:absolute;
+				border:1px solid #2d2d2d;
+				}
+				
+/* Apply Button */
+
+a.btn_apply		{
+				display:block;
+				overflow:hidden;
+				width:173px;
+				height:33px;
+				text-indent:-9999px;
+				line-height:9999px;
+				background-image:url(../images/btn_apply.png);
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				}
+				
+a:hover.btn_apply	{background-position: 0 -33px;}
+a:active.btn_apply	{background-position: 0 -66px;}

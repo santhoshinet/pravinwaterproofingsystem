@@ -1,14 +1,126 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>PravinWaterProofingSystem</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
+    <%= stylesheet_link_tag "styles" %>
+	<%= stylesheet_link_tag "styles-panel" %>
+    <%= stylesheet_link_tag "uniform.agent" %>
+	<%= stylesheet_link_tag "widgets" %>
+    <%= stylesheet_link_tag "ddsmoothmenu" %>
+
+	<!-- Initialise jQuery Library -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    <%= javascript_include_tag "jquery.easing.1.3" %>
+
+	<!-- :before, :after for IE7 -->
+	<!--[if IE 7]>
+        <%= javascript_include_tag "jquery.pseudo.js" %>
+	<![endif]-->
+
+	<!-- jQuery Watermark Plugin -->
+    <%= javascript_include_tag "jquery.watermarkinput" %>
+
+	<!-- DropDown Menu Plugin -->
+    <%= javascript_include_tag "ddsmoothmenu" %>
+
+	<!-- jQuery autoAlign -->
+    <%= javascript_include_tag "jquery.flexibleColumns.min" %>
+
+    <%= javascript_include_tag "custom" %>
+
+	<title>Pravin Waterproofing System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
+<div class="top_full"></div>
+<div id="container">
+	<!-- Start Top -->
+	<div id="top">
+		<div class="title"><h2>Pravin Waterproofing System</h2></div>
+		<!-- Start Main Nav -->
+		<div id="menu">
+			<ul class="ddsmoothmenu">
+				<li><%= link_to "About Us", {:controller => "home", :action => "index"}, :title => "About Us", :class => "current-menu-item" %></li>
+				<li><%= link_to "Services Offered", {:controller => "home", :action => "services" }, :title => "Services Offered" %></li>
+                <li><%= link_to "Clients", {:controller=> "home", :action => "clients"}, :title => "Clients" %></li>
+				<li><%= link_to "Photo Gallery", {:controller=> "home", :action => "gallery"}, :title => "Photo Gallery" %></li>
+                <li><%= link_to "Contact Us", {:controller=> "home", :action => "contactus"}, :title => "Contact Us" %></li>
+			</ul>
+		</div>
+		<!-- End Main Nav -->
+        <div class="clear"></div>
+	</div>
+	<!-- End Top -->
 
-<%= yield %>
+     <%= yield %>
 
+	<!-- Start Social Profiles Area -->
+	<div class="social_bar">
+		<a href="http://www.facebook.com/people/@/100001548696431" class="social facebook" title="Facebook"></a>
+		<a href="feed://themeforest.net/feeds/users/MixerTheme" class="social rss" title="RSS"></a>
+		<a href="http://twitter.com/MixerTheme" class="social twitter" title="Twitter"></a>
+		<div class="clear"></div>
+	</div>
+	<!-- End Social Profiles Area -->
+
+	<!-- Start Footer Sidebar -->
+	<div id="fsb">
+		<!-- Start First Collumn -->
+		<div class="widget-container widget_text">
+			<h3>Why Pick Umbrella?</h3>
+			<p>Bibendum, erat ante aliquam elit, non tempor ligula tortor ac arcu. Nullam augue purus, volut pat ut eleifend ultrices.<br />Varius sed velit. Sed tempor mauris vel enim rutrum condimentum. Integer non auctor neque. Vestibulum suscipit.</p>
+		</div>
+		<!-- Start Second Collumn -->
+		<div class="widget-container widget_recent_entries">
+			<h3>Recent Posts</h3>
+			<ul>
+				<li><a href="blog-single.html">Mperdiet tempor eget lacus donecet sagittis ligula.</a></li>
+				<li><a href="blog-single.html">Tortor nisl lacinia justo, mollis</a></li>
+				<li><a href="blog-single.html">Pellentesque sodales, justo</a></li>
+				<li><a href="blog-single.html">Aenean non laoreet dui nullam ncidunt velit pellentesque</a></li>
+			</ul>
+		</div>
+		<!-- Start Third Collumn -->
+		<div class="widget-container widget_twitter">
+			<h3>Latest from Twitter</h3>
+			<ul class="twitter_box">
+				<li>
+					<a href="http://twitter.com/#!/mixertheme" class="twitt_day">envato - 2:26 AM yesterday</a>
+					<p>Freebie Friday: 17 Inherently Useful Freebies for Freelancers</p>
+					<a href="http://twitter.com/#!/mixertheme">http://enva.to/dQzWOq</a>
+				</li>
+				<li>
+					<a href="http://twitter.com/#!/mixertheme" class="twitt_day">envato - 2:26 AM yesterday</a>
+					<p>Freebie Friday: 17 Inherently Useful Freebies for Freelancers</p>
+					<a href="http://twitter.com/#!/mixertheme">http://enva.to/dQzWOq</a>
+				</li>
+			</ul>
+		</div>
+		<!-- Start Fourth Collumn -->
+		<div class="widget-container widget_recent_posts">
+			<h3>Latest Projects</h3>
+			<ul>
+				<li><a href="http://themeforest.net/item/simble-creative-business-portfolio-wordpress-theme/246264?ref=MixerTheme" class="thumb"><img src="images/content/simble.png" width="46" height="46" alt="" /></a></li>
+				<li><a href="http://themeforest.net/item/maximus-professional-wordpress-theme/142284?ref=MixerTheme" class="thumb"><img src="images/content/maximus.png" width="46" height="46" alt="" /></a></li>
+				<li><a href="http://themeforest.net/item/naturel-premium-wordpress-theme/106321?ref=MixerTheme" class="thumb"><img src="images/content/naturel.jpg" width="46" height="46" alt="" /></a></li>
+				<li><a href="http://themeforest.net/item/greatio-premium-wordpress-theme/101595?ref=MixerTheme" class="thumb"><img src="images/content/greatio.jpg" width="46" height="46" alt="" /></a></li>
+				<li><a href="http://themeforest.net/user/MixerTheme/portfolio?ref=MixerTheme" class="thumb"><img src="images/content/recent_thumb_05.jpg" width="46" height="46" alt="" /></a></li>
+				<li><a href="http://themeforest.net/user/MixerTheme/portfolio?ref=MixerTheme" class="thumb"><img src="images/content/recent_thumb_06.jpg" width="46" height="46" alt="" /></a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- End Footer Sidebar -->
+
+	<!-- Start Footer  -->
+	<div id="footer">
+		<div class="copy">
+			<p></p>
+		</div>
+		<div class="developed_by"></div>
+		<div class="clear"></div>
+	</div>
+	<!-- End Footer  -->
+</div>
 </body>
 </html>
